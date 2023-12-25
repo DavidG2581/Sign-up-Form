@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <!-- <img src="halie-unsplash.jpg" alt=""> -->
+            <div class="banner">
+                <img src="odin-lined.png" alt="">
+                <a href="https://www.theodingproject.com">The Odin Project</a>>
+            </div>
+            <div class="shoutout">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/brown-rocky-mountain-under-blue-sky-during-daytime-5BqHaqlJ_0A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"> Unsplash</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <h1>Sign up here:</h1>
+            </div>
+            <div class="form" >
+                <form method="post" action="" id="a-form">
+                    <ul>
+                        <li>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="John">
+                        </li>
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email"  placeholder="john@doe.com">
+                        </li>
+                        <li>
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" >
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label for="lastName">Last name:</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="Doe">
+                        </li>
+                        <li>
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" name="phone" id="phone" pattern="[0-9]{10}">
+                        </li>
+                        <li>
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword" >
+                        </li>
+                        <input type="hidden" name="" id="">
+                    </ul>
+                </form>
+            </div>
+            <button type="submit" form="a-form">Create Account</button>
+            <div class="end-content"></div>
+        </div>
+
+    </div>
+</body>
+</html>
