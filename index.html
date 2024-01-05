@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up form</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="./formCheck.js" ></script>
 </head>
 <body>
     <div class="container">
@@ -22,7 +23,7 @@
                 <h1>Sign up here:</h1>
             </div>
             <div class="form" >
-                <form method="post" action="" id="a-form">
+                <form method="GET" action="/" id="form">
                     <ul>
                         <li>
                             <label for="firstName">First Name:</label>
@@ -30,11 +31,11 @@
                         </li>
                         <li>
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email"  placeholder="john@doe.com">
+                            <input type="email" name="email" id="email"  placeholder="johndoe@email.com" required>
                         </li>
                         <li>
                             <label for="password">Password:</label>
-                            <input type="password" name="password" id="password" >
+                            <input type="password" name="password" id="password" required >
                         </li>
                     </ul>
                     <ul>
@@ -44,20 +45,21 @@
                         </li>
                         <li>
                             <label for="phone">Phone Number:</label>
-                            <input type="text" name="phone" id="phone" pattern="[0-9]{10}">
+                            <input type="text" name="phone" id="phone" pattern="(\d{3}[\-]\d{3}[\-]\d{4})" placeholder="xxx-xxx-xxxx">
                         </li>
                         <li>
                             <label for="confirmPassword">Confirm Password:</label>
-                            <input type="password" name="confirmPassword" id="confirmPassword" >
+                            <input type="password" name="confirmPassword" id="confirmPassword" required>
                         </li>
                         <input type="hidden" name="" id="">
                     </ul>
                 </form>
             </div>
-            <button type="submit" form="a-form">Create Account</button>
+            <button type="submit" id="submit" form="a-form">Create Account</button>
             <div class="end-content"></div>
         </div>
 
     </div>
+    <!-- <input type="text" name="phone" id="phone" pattern="[0-9]{10}"> -->
 </body>
 </html>
