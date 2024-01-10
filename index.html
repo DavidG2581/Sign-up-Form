@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up form</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="./formCheck.js" ></script>
+    <script defer src="./formCheck.js" >onload="document.form.reset()";</script>
 </head>
 <body>
     <div class="container">
@@ -23,39 +23,41 @@
                 <h1>Sign up here:</h1>
             </div>
             <div class="form" >
+                <!-- change action to "" after fixing validations -->
                 <form method="GET" action="/" id="form">
                     <ul>
                         <li>
                             <label for="firstName">First Name:</label>
-                            <input type="text" name="firstName" id="firstName" placeholder="John">
+                            <input type="text" name="firstName" id="firstName" placeholder="John" minlength="2" maxlength="25" value="John">
                         </li>
                         <li>
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email"  placeholder="johndoe@email.com" required>
+                            <input type="email" name="email" id="email"  placeholder="johndoe@email.com" maxlength="25"  value="default@email.com">
                         </li>
                         <li>
                             <label for="password">Password:</label>
-                            <input type="password" name="password" id="password" required >
+                            <input type="password" name="password" id="password" minlength="10"  required >
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <label for="lastName">Last name:</label>
-                            <input type="text" name="lastName" id="lastName" placeholder="Doe">
+                            <input type="text" name="lastName" id="lastName" minlength="2" placeholder="Doe">
                         </li>
                         <li>
                             <label for="phone">Phone Number:</label>
-                            <input type="text" name="phone" id="phone" pattern="(\d{3}[\-]\d{3}[\-]\d{4})" placeholder="xxx-xxx-xxxx">
+                            <input type="text" name="phone" id="phone" pattern="(\d{3}[\-]\d{3}[\-]\d{4})|(\d{3}\d{3}\d{4})" placeholder="xxx-xxx-xxxx" value="703-888-8888">
                         </li>
                         <li>
                             <label for="confirmPassword">Confirm Password:</label>
-                            <input type="password" name="confirmPassword" id="confirmPassword" required>
+                            <input type="password" name="confirmPassword" id="confirmPassword" minlength="10" required>
                         </li>
                         <input type="hidden" name="" id="">
                     </ul>
                 </form>
             </div>
-            <button type="submit" id="submit" form="a-form">Create Account</button>
+            <button type="submit" id="submit" form="form">Create Account</button>
+            <button type="reset" form="form">Reset</button>
             <div class="end-content"></div>
         </div>
 

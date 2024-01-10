@@ -14,7 +14,7 @@ body {
 
 .left {
     background-image: url('halie-unsplash.jpg');
-    width:50%;
+    width:540px;
     background-position: 0%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,7 +72,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+    width: 540px;
     padding: 25px 20px;
     gap: 50px;
 }
@@ -98,14 +98,18 @@ form {
 }
 
 .right button {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #596D48;
+    color:white;
     font-size: x-large;
     padding: 0 5px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 button:active {
     background: #02ff02;
+    color:black;
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
        -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
             box-shadow: inset 0px 0px 5px #c1c1c1;
@@ -115,7 +119,7 @@ button:active {
 
 /*   FORM VALIDATION CSS  */
 
-input:invalid {
-    border: 2px red solid;
+input:user-invalid {
+    /* border: 2px red solid; */
+    box-shadow: 0 0 5px 1px red;
 }
-
