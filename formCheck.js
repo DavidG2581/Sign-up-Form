@@ -31,7 +31,7 @@ function validateForm(e) {
         console.log('passwords match',password1,"and",password2);
         pass2.setCustomValidity('');
       }else {
-        console.log('passwords do not match');
+        console.log('passwords do not match - if statement');
         pass2.setCustomValidity('Passwords must match');
       }
   
@@ -58,8 +58,8 @@ function validateForm(e) {
           console.log('passwords match',password1,"and",password2);
           pass2.setCustomValidity('');
         }else {
-          console.log('passwords do not match');
-          pass2.setCustomValidity('Passwords mus2t match');
+          console.log('passwords do not match - else statement');
+          pass2.setCustomValidity('Passwords must match');
         }    
 
 
